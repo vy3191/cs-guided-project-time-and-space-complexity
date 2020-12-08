@@ -15,4 +15,26 @@ Notes:
 """
 def two_sum(nums, target):
     # Your code here
+    # for i in range(len(nums)-1):
+    #     if nums[i] + nums[i+1] == target: 
+    #         return [i, i+1]
+    
+    num_dict = {}
+        
+    for i in range(len(nums)):
+        num_dict[nums[i]] = i
+        
+    for i in range(len(nums)):
+        # get the current num
+        current_num = nums[i]
+        #find the complement
+        complement = target - current_num
+        # check if the compliment is in dict
+        if complement in num_dict:
+            return [i, num_dict[complement]]
+        
+        
+        
+print(two_sum(nums=[2,5,9,13], target=7))
+print(two_sum(nums = [4,3,5], target = 8))
 

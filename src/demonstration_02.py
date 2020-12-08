@@ -11,4 +11,8 @@ Examples:
 """
 def single_number(nums):
     # Your code here
-
+    for i in range(len(nums)-1):
+        if arr[i] == arr[i+1]: 
+            return [i, i+1]
+        
+print(single_number(nums=[2,5,9,13], target=7))
