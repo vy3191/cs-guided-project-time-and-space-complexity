@@ -30,7 +30,7 @@ def two_sum(nums, target):
         #find the complement
         complement = target - current_num
         # check if the compliment is in dict
-        if complement in num_dict:
+        if complement in num_dict and i != num_dict[complement]:
             return [i, num_dict[complement]]
         
         
